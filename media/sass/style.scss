@@ -1,0 +1,103 @@
+@import 'mixins.scss';
+
+body
+{
+	background:url('../imgs/wood13.jpg') repeat;
+}
+.page-header
+{
+	margin-top:0;
+	h2
+	{
+		margin-top:0;
+	}
+}
+.btn
+{
+	border-radius:0;
+	&.btn-info
+	{
+		background:orange;
+		border-color:orange;
+		text-transform:uppercase;
+		&:active,
+		&:focus,
+		&:hover
+		{
+			background:darken(orange, 1);
+			border-color:darken(orange, 1);
+		}
+	}
+}
+#main
+{
+	background:#EEE;
+	margin-top:30px;
+	min-height:500px;
+	@include dropshadow(2);
+	header
+	{
+		padding:10px;
+	}
+}
+#header
+{
+	border-bottom:1px solid #DDD;
+
+	.nav-tabs,
+	.nav
+	{
+		height:60px;
+		line-height:60px;
+		border-bottom:0;
+		> li
+		{
+			float:right;
+			> a
+			{
+				height:60px;
+				line-height:60px;
+				border:0;
+				&:hover,
+				&:focus
+				{
+					background-color:inherit;
+					border:0;
+					color:#333;
+				}
+			}
+			&.active
+			{
+				a
+				{
+					border:0;
+					background:none;
+					&:hover,
+					&:focus
+					{
+						background-color:inherit;
+						border:0;
+					}
+				}
+			}
+		}
+	}
+}
+#content
+{
+	padding-bottom:100px;
+	.media
+	{
+		margin-bottom:10px;
+	}
+}
+#footer
+{
+	color:#FFF;
+	padding-top:10px;
+	font-weight:200;
+}
+.tab-content
+{
+	padding-top:20px;
+}
